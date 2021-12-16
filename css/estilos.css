@@ -1,0 +1,123 @@
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+header{
+    background-color: #216288;
+    width: 100%;
+    height: 200px; 
+}
+
+.cabecera{
+    width: 80%;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h1{
+    color: white;    
+    margin-top: 30px;
+    margin-bottom: 20px;    
+}
+
+.logo{
+    width: 15%;
+    margin: 2% 0 2% 10%;
+    float: left;
+}
+
+.titular{
+    width: 45%;
+    height: 100%;
+    margin-left: 15%;
+    text-align: right;
+    float: left;
+}
+
+nav{
+    width: 100%;
+    height: 70px;
+    background-color: #b8d414;
+    text-align: center;
+}
+
+nav li, nav ul, nav a{
+    display: inline-block;
+    list-style: none;
+    text-decoration: none;
+    margin: 10px;
+    color: black;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+nav li{
+    margin-top: 5px;
+}
+
+nav li ul:first-of-type a{
+    text-decoration: underline;
+}
+
+nav a:hover{
+    color: #216288;
+}
+
+.video{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.video h2{
+    margin: 40px 0 25px 0;
+    text-align: center;
+}
+
+.video p{
+    width: 30%;
+    float:left;
+    text-align: justify;
+    align-items: center;
+    margin-top: 15px;
+    margin-right: 20px;
+    margin-left: 18%;
+}
+
+.video video{
+    height: 22vh;
+}
+
+.svg-inline--fa{
+    width: 20px;
+}
+
+.fa-facebook-f{
+    width: 12px;
+}
+
+.realiza{
+    width: 100%;
+    height: 200px;
+    margin-top: 30px;
+    background-color: #e5fed4;
+}
+
+.donde{
+    width: 25%;
+    margin: 10px 30px;
+    float: left;
+}
+
+.donde p{
+    margin: 2px;
+}
+
+.cuando{
+    width: 20%;
+    float: left;
+}
