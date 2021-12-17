@@ -94,7 +94,6 @@ nav a:hover{
     width: 80%;
     margin-left: auto;
     margin-right: auto;
-
 }
 
 /*Alineación de texto y márgenes para imitar lo solicitado*/
@@ -105,39 +104,34 @@ nav a:hover{
 
 /*Dimensiono el elemento p para poderlo flotar y dejar hueco al vídeo al sacarlo del flujo de la estructura*/
 .video p{
-    width: 32%;
+    width: 35%;
     float: left;
     text-align: justify;
+    font-size: 1.1em;
     align-items: center;
     margin-top: 5px;
-    margin-right: 35px;
-    margin-left: 18%;
+    margin-right: 50px;
+    margin-left: 14%;
 }
 
 /*Le doy una altura para que quede parejo y como la muestra del PDF*/
 .video video{
-    height: 175px;
+    height: 200px;
 }
 
 /*Contenedor para las secciones de dónde y cómo se realiza con ancho del 100% y alto fijo, margen superior para separalo del contenedor previo del video, color extraído de la foto*/
 .realiza{
     width: 100%;
-    height: 250px;
+    height: 330px;
     margin-top: 60px;
     background-color: #e5fed4;
 }
 
 /*Estilos para el contenedor del Dónde, flotado a izquierda para posicionarlo dentro de su contenedor*/
 .donde{
-    width: 25%;
-    margin: 2% 30px 10px 26%;
+    width: 22%;
+    margin: 2% 70px 10px 24%;
     float: left;
-}
-
-/*Añadimos el borde para el efecto subrayado, color acorde al resto de la web, reducimos su ancho para asimilarlo a la muestra*/
-.donde h2{
-    width: 85%;
-    border-bottom: 3px dotted #b8d414;
 }
 
 /*Quitamos el aspecto de link del teléfono*/
@@ -191,17 +185,78 @@ address{
 
 /*Estilos para el contenedor del Cuándo flotado a izquierda para posicionarlo a la derecha de Dónde*/
 .cuando{
-    width: 25%;
+    width: 22%;
     margin-top: 2%;
     float: left;
 }
 
-.cuando h2{
-    width: 85%;
+/*Añadimos el borde para el efecto subrayado, color acorde al resto de la web, reducimos su ancho para asimilarlo a la muestra*/
+.cuando h2, .donde h2{
+    width: 95%;
     border-bottom: 3px dotted #b8d414;
 }
 
 /*Quito los estilos por defecto de las etiquetas em*/
 .cuando em{
     font-style: normal;
+}
+
+/*Aumento de tamaño del strong*/
+.cuando p strong{
+    font-size: 1.2em;
+}
+
+/*Color del link inscripción en gris*/
+.cuando p strong a{
+    color: grey
+}
+
+.eventos{
+    width: 920px;
+    height: 430px;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.eventos h2{
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.eventos img{
+    width: 220px;
+    height: 120px;
+    margin: 5px 15px 5px;
+    float: left;
+}
+
+.eventos p{
+    width: 260px;
+    margin: 10px 10px 10px 30px;
+    font-size: 0.85em;
+    text-align: center;
+    float: left;
+}
+
+.eventos p:nth-child(3){
+    width: 275px;
+}
+
+.eventos p:nth-child(4){
+    width: 260px;
+}
+
+footer{
+    width: 100%;
+    height: 200px;
+    background-color: black;
+    color: white;
+}
+
+footer p{
+    padding-top: 20px;
+    margin-left: 20%;
 }
