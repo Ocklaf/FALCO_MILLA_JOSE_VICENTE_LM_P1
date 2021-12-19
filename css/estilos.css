@@ -30,8 +30,8 @@ h1{
 
 /*Ancho con respecto a su contenedor, márgenes adaptables en función del cambio de tamaño, flotado a la izquierda de su contenedor*/
 .logo{
-    width: 12%;
-    margin: 4% 0 2% 10%;
+    height: 70%;
+    margin: 15px 10% 0 2%;
     float: left;
 }
 
@@ -80,7 +80,7 @@ nav li{
 }
 
 /*Subrayamos únicamente el primer tipo de elemento a contenido dentro de nav, dentro de li, dentro de ul*/
-nav li ul:first-of-type a{
+nav ul li:first-of-type a{
     text-decoration: underline;
 }
 
@@ -91,7 +91,7 @@ nav a:hover{
 
 /*Contendero para el vídeo y el resto de elementos con las mismas dimensiones que el contenedor que contiene los elementos del header*/
 .video{
-    width: 80%;
+    width: 90%;
     margin-left: auto;
     margin-right: auto;
 }
@@ -104,14 +104,14 @@ nav a:hover{
 
 /*Dimensiono el elemento p para poderlo flotar y dejar hueco al vídeo al sacarlo del flujo de la estructura*/
 .video p{
-    width: 35%;
+    width: 45%;
     float: left;
     text-align: justify;
     font-size: 1.1em;
     align-items: center;
-    margin-top: 5px;
+    margin-top: 15px;
     margin-right: 50px;
-    margin-left: 14%;
+    margin-left: 7%;
 }
 
 /*Le doy una altura para que quede parejo y como la muestra del PDF*/
@@ -122,15 +122,15 @@ nav a:hover{
 /*Contenedor para las secciones de dónde y cómo se realiza con ancho del 100% y alto fijo, margen superior para separalo del contenedor previo del video, color extraído de la foto*/
 .realiza{
     width: 100%;
-    height: 330px;
+    height: 300px;
     margin-top: 60px;
     background-color: #e5fed4;
 }
 
 /*Estilos para el contenedor del Dónde, flotado a izquierda para posicionarlo dentro de su contenedor*/
 .donde{
-    width: 22%;
-    margin: 2% 70px 10px 24%;
+    width: 30%;
+    margin: 2% 70px 10px 20%;
     float: left;
 }
 
@@ -185,7 +185,7 @@ address{
 
 /*Estilos para el contenedor del Cuándo flotado a izquierda para posicionarlo a la derecha de Dónde*/
 .cuando{
-    width: 22%;
+    width: 26%;
     margin-top: 2%;
     float: left;
 }
@@ -201,8 +201,9 @@ address{
     font-style: normal;
 }
 
-/*Aumento de tamaño del strong*/
-.cuando p strong{
+/*Aumento de tamaño del strong y sólo a ese p que contiene la etiqueta strong le hacemos un alineamiento justificado como la muestra*/
+.cuando p:last-of-type{
+    text-align: justify;
     font-size: 1.2em;
 }
 
@@ -211,6 +212,7 @@ address{
     color: grey
 }
 
+/*Sección Eventos con ancho y alto fijo y posicionamiento auto al centro, separando de su parte superior con el margin*/
 .eventos{
     width: 920px;
     height: 430px;
@@ -219,6 +221,7 @@ address{
     margin-right: auto;
 }
 
+/*ancho en función del contenedor section con centrado auto y alineación centrada del texto*/
 .eventos h2{
     width: 70%;
     margin-left: auto;
@@ -226,6 +229,7 @@ address{
     text-align: center;
 }
 
+/*ancho y alto fijo e igual para todas las imágenes flotadas a izquierda teniendo en cuenta que están dentro del contenedor de la etiqueta p y dejando márgenes*/
 .eventos img{
     width: 220px;
     height: 120px;
@@ -233,6 +237,7 @@ address{
     float: left;
 }
 
+/*Uso del elemento p como contenedor de las imágenes, dándole un ancho un poco superior para centrar el texto de mejor forma bajo cada imagen, flotado a izquierda*/
 .eventos p{
     width: 260px;
     margin: 10px 10px 10px 30px;
@@ -241,14 +246,7 @@ address{
     float: left;
 }
 
-.eventos p:nth-child(3){
-    width: 275px;
-}
-
-.eventos p:nth-child(4){
-    width: 260px;
-}
-
+/*Ancho del 100%, alto fijo, color de fondo negro y letras en blanco*/
 footer{
     width: 100%;
     height: 200px;
@@ -256,7 +254,138 @@ footer{
     color: white;
 }
 
+/*Márgenes y padding para conseguir el mismo efecto que la muestra*/
 footer p{
     padding-top: 20px;
     margin-left: 20%;
+}
+
+/*Sección de tabla ocupando el 100% de ancho y alto fijo*/
+.tabla-sec{
+    width: 100%;
+    height: 350px;
+}
+
+/*Estilos para el h2 de la sección de la tabla*/
+.tabla-sec h2{
+    text-align: center;
+    margin-top: 55px;
+    margin-bottom: 25px;
+}
+
+/*Centramos la tabla en cualquier resolución*/
+table{
+    margin-left: auto;
+    margin-right: auto;
+}
+ /*Fondo, color de letra y tipo de letra como muestra*/
+table thead th{
+    background-color: black;
+    color: white;
+    font-weight: lighter;
+}
+
+/*Fondo verde a la cabecera del body de la tabla*/
+tbody tr th{
+    background-color: #b8d414;
+    text-align: left;
+}
+
+/*Color a las table row impares, color extraído de la imagen adjunta para la actividad, pues no es el mismo verde claro del resto de la web, es más oscuro*/
+tbody tr:nth-of-type(odd){
+    background-color: #cae9ab;
+}
+
+/*Ancho columna "Fecha"*/
+table tr th:first-child{
+    width: 100px;
+}
+
+/*Ancho columna "Taller"*/
+table tr th:nth-child(2){
+    width: 570px;
+}
+
+/*Ancho columna "Ponente"*/
+table tr th:nth-child(3){
+    width: 130px;
+}
+
+/*Ancho columna "Horario"*/
+table tr th:nth-child(4){
+    width: 100px;
+}
+
+/*Ancho columna "Horario"*/
+table tr th:nth-child(5){
+    width: 100px;
+}
+
+/*Ancho y separación lateral con respecto al texto del icono del reloj en la tabla*/
+.fa-clock{
+    width: 16px;
+    margin-right: 2px;
+}
+
+/*Subrayado de una fila concreta, con otros selectores sin poner clase no he econtrado la forma de poner ese subrayado*/
+.subrayado{
+    border-bottom: 2px solid black;
+}
+
+/*Ancho y separación lateral con respecto al texto del icono del marcador en la tabla*/
+.fa-map-marker-alt{
+    width: 14px;
+    margin-right: 2px;
+}
+
+tfoot{
+    text-align: center;
+}
+
+tfoot a{
+    color: gray;
+}
+
+tfoot a:hover{
+    color: #216288;
+}
+
+/*Bloque del section programación*/
+.programacion{
+    width: 100%;
+    height: 350px;
+    background-color: #e5fed4;
+}
+
+/*Desplazo el contenido por el lado izquierdo y le doy mayor tamaño de letra*/
+section>h2{
+    padding-left: 6%;
+    font-size: 2em;
+}
+
+/*Juntamos estilos idénticos para ambos artículos*/
+.dia1, .dia2{
+    width: 350px;
+    float: left;
+    margin-top: 30px;
+}
+
+/*Estilos específicos para este artículo*/
+.dia1{
+    margin-left: 13%;
+    margin-right: 30px;
+}
+
+/*Hacemos un espaciado interior para darle hueco como en la referéncia*/
+.dia1 p, .dia1 h2, .dia2 p, .dia2 h2{
+    padding: 10px;
+}
+
+/*Hago un inline-block para ajustar el tamaño de caja al contenido, así le pongo el background-color y le quito el padding por defecto, ajusto como en muestra por izquierda y abajo*/
+.dia1 h2, .dia2 h2{
+    display: inline-block;
+    padding: 0px;
+    margin-left: 9px;
+    margin-bottom: 15px;
+    background-color: #bdfc80;
 }

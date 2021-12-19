@@ -18,14 +18,30 @@
         </div>
     </header>
     <nav>
-        <li>
-            <ul><a href="/index.html">Inicio</a></ul>
-            <ul><a href="/programacion.html">Programación</a></ul>
-            <ul><a href="/inscripcion.html">Registro a las jornadas</a></ul>
-        </li>
+        <ul>
+            <li><a href="/index.html">Inicio</a></li>
+            <li><a href="/programacion.html">Programación</a></li>
+            <li><a href="/inscripcion.html">Registro a las jornadas</a></li>
+        </ul>
     </nav>
-
-
+    <main>
+        <h1>Formulario de inscripción</h1>
+        <form action="">
+            <fieldset>
+                <legend>Datos personales</legend>
+                <label for="nombre">Nombre</label>
+                <input type="text" name="nombre" id="nombre" required pattern="[a-zñáéíóúA-ZÑÁÉÍÓÚ]{2,50}" title="Sólo se admiten letras con un mínimo de 2 carácters y máximo 50" placeholder="Campo obligatorio"><br>
+                <label for="apellidos">Apellidos</label>
+                <input type="text" name="apellidos" id="apellidos" required pattern="[a-zñáéíóúA-ZÑÁÉÍÓÚ]{2,128}" title="Sólo se admiten letras con un mínimo de 2 carácters y máximo 128" placeholder="Campo obligatorio"><br>
+                <label for="email">E-Mail</label>
+                <input type="email" name="email" id="email" required pattern="^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$" placeholder="correo@ejemplo.com">
+                <!--RegExp cogida de w3c-->
+            </fieldset>
+            <fieldset>
+                <legend>Perfil de usuario</legend>
+            </fieldset>
+        </form>
+    </main>
     <footer>
         <p>Actividad realizada por José Vicente Falcó Milla, para la asignatura de Lenguajes de Marcas</p>
         <p>Primer trimestre 2021/2022</p>
