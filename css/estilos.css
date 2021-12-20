@@ -140,7 +140,7 @@ nav a:hover{
     color: black;
 }
 
-/*Como mantenemos la funcionalidad, al pasar el ratón cambia de color y mantine el cursor como pointer*/
+/*Como mantenemos la funcionalidad, al pasar el ratón cambia de color*/
 .donde p:first-of-type a:hover{
     text-decoration: none;
     color: #216288;

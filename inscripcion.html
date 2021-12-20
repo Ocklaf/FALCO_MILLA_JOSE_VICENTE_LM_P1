@@ -25,20 +25,43 @@
         </ul>
     </nav>
     <main>
-        <h1>Formulario de inscripción</h1>
-        <form action="">
+        <h2>Formulario de inscripción</h2>
+        <form>
             <fieldset>
                 <legend>Datos personales</legend>
                 <label for="nombre">Nombre</label>
-                <input type="text" name="nombre" id="nombre" required pattern="[a-zñáéíóúA-ZÑÁÉÍÓÚ]{2,50}" title="Sólo se admiten letras con un mínimo de 2 carácters y máximo 50" placeholder="Campo obligatorio"><br>
+                <input type="text" name="nombre" id="nombre" required pattern="[a-zñáéíóúA-ZÑÁÉÍÓÚ]{2,50}" title="Sólo se admiten letras con un mínimo de 2 carácters y máximo 50"><br>
                 <label for="apellidos">Apellidos</label>
-                <input type="text" name="apellidos" id="apellidos" required pattern="[a-zñáéíóúA-ZÑÁÉÍÓÚ]{2,128}" title="Sólo se admiten letras con un mínimo de 2 carácters y máximo 128" placeholder="Campo obligatorio"><br>
+                <input type="text" name="apellidos" id="apellidos" required pattern="[a-zñáéíóúA-ZÑÁÉÍÓÚ]{2,128}" title="Sólo se admiten letras con un mínimo de 2 carácters y máximo 128"><br>
                 <label for="email">E-Mail</label>
-                <input type="email" name="email" id="email" required pattern="^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$" placeholder="correo@ejemplo.com">
+                <input type="email" name="email" id="email" required pattern="^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$" placeholder="correo@ejemplo.com"><br>
                 <!--RegExp cogida de w3c-->
+                <label for="telf">Teléfono</label>
+                <input type="tel" name="tel" id="tel" required pattern="(6|7|9)[0-9]{8}" title="9 dígitos numéricos empezando por 6, 7 o 9"><br>
+                <label for="foto">Adjuntar foto (no obligatorio)</label>
+                <input type="file" name="file" id="foto">
             </fieldset>
             <fieldset>
                 <legend>Perfil de usuario</legend>
+                <label for="motivos">Explique, brevemente, los motivos para participar en las jornadas</label>
+                <textarea name="motivos" id="motivos" cols="40" rows="5" required placeholder="Escriba aquí una breve explicación"></textarea><br>
+                <label for="profesion">Elija una de las opciones</label>
+                <select name="profesion" id="profesion" required>
+                    <option value="">Seleccione una opción</option>
+                    <option value="1">Estudiante bachillerato</option>
+                    <option value="2">Estudiante universitario</option>
+                    <option value="3">Doctorado</option>
+                    <option value="4">Profesional Informático</option>
+                    <option value="5">Profesor</option>
+                    <option value="6">Otros</option>
+                </select><br>
+                <p>Elija los talleres a los que desee asistir:</p>
+                <label for="check1"><input type="checkbox" name="check1" id="check1">Computación Cuántica</label><br>
+                <label for="check2"><input type="checkbox" name="check2" id="check2">Animación 3D</label><br>
+                <label for="check3"><input type="checkbox" name="check3" id="check3">Análisis de dispositivos móviles</label><br>
+                <label for="check4"><input type="checkbox" name="check4" id="check4">Metodologías Ágiles y Transformación Digital</label><br>
+                <label for="check5"><input type="checkbox" name="check5" id="check5">Realidad Virtual y Aumentada</label><br>
+                <label for="check6"><input type="checkbox" name="check6" id="check6">First Lego League</label>
             </fieldset>
         </form>
     </main>
