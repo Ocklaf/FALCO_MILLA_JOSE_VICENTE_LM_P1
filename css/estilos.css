@@ -87,6 +87,7 @@ nav ul li:first-of-type a{
 /*Cambio de color de los links del nav al pasar el ratón por encima*/
 nav a:hover{
     color: #216288;
+    transition: 0.4s;
 }
 
 /*Contendero para el vídeo y el resto de elementos con las mismas dimensiones que el contenedor que contiene los elementos del header*/
@@ -388,4 +389,125 @@ section>h2{
     margin-left: 9px;
     margin-bottom: 15px;
     background-color: #bdfc80;
+}
+
+
+/************** PÁGINA DEL FORMULARIO *************/
+
+/*Cabecera de esta página*/
+form h2{
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 25px;
+}
+
+/*Aspecto general de los contenedores fieldset*/
+fieldset{
+    width: 60%;    
+    padding: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 25px;
+    background-color: #cae9ab;
+    box-shadow: 3px 3px 6px #216288;
+}
+
+/*Personalización del texto de la etiqueta de legend*/
+legend{
+    border: 3px solid #216288;
+    border-radius: 4px;
+    padding: 5px;
+    background-color: #b8d414;
+    font-weight: bold;
+}
+
+/*Le dabmos un display: inline-block para podernos aprovechar de sus propiedades para ajustar ancho y márgenes a todas ellas*/
+label{
+    display: inline-block;
+    width: 200px;
+    margin-left: 10%;
+}
+
+/*Quitamos tamaño al texto (no necesario)*/
+label span{
+    font-size: 0.8em;
+}
+
+/*Damos un ancho fijo a todos los campos input y select, los separamos por bajo del resto 10px*/
+input, select{
+    width: 250px;
+    margin-bottom: 10px;
+}
+
+input:required:invalid{
+    background-color: rgb(230, 106, 106);
+}
+
+input:required:valid{
+    background-color: rgb(132, 216, 132);
+}
+
+/*Cambio de color y a negrita cuando nos ponemos a rellenar*/
+input:focus, textarea:focus{
+    font-weight: bold;
+    color: #216288;
+}
+
+/*Flotamos a la derecha de los label sus respectivos textarea y select multiple*/
+.text textarea, .taller select, .dias select{
+    width: 250px;
+    margin-right: 103px;
+    margin-top: 10px;
+    float: right;    
+}
+
+/*Separamos 10px por arriba con respecto al div para alinear/centrar el texto con respecto a su textarea y su select multiple*/
+.text label, .taller label{
+    margin-top: 10px;
+}
+
+/*Englobamos tanto el textarea y su label, como el select multiple y su label en un div cada grupo para trabajar con los float y poder posicionar los campos alineados*/
+.text, .taller, .dias{
+    width: 100%;
+    margin-bottom: 10px;
+    overflow: hidden;
+}
+
+/*La advertencia/instrucciones bajo la selección múltiple le damos propiedades adecuadas*/
+fieldset p{
+    width: 495px;
+    margin: 5px auto 0 auto;
+    font-size: 0.65em;
+    clear: right;
+}
+
+/*Modificamos tamaño de este label ya que está "abrazando" al input, cambiamos las propiedades heredadas por cascada para ponerlo en una única línea*/
+.condiciones{
+    width: 100%;
+    margin-top: 20px;
+}
+
+/*Damos un ancho muy pequeño para el checkbox que está abrazado por el label*/
+.condiciones input{
+    width: 15px;
+}
+
+/*Estilos para el botón de enviar formulario*/
+button{
+    display: block;
+    padding: 10px 25px;
+    background-color: #b8d414;
+    margin: 20px auto 40px auto;
+    border: 2px solid #216288;
+    border-radius: 4px;
+    box-shadow: 1px 1px 3px #216288;
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+/*Algunos cambios de estética al pasar el mouse por encima*/
+button:hover{
+    cursor: pointer;
+    box-shadow: 3px 3px 3px #b8d414;
+    transition: 0.4s;
 }
