@@ -31,9 +31,9 @@ h1 {
 }
 
 /*Ancho con respecto a su contenedor, márgenes adaptables en función del cambio de tamaño, flotado a la izquierda de su contenedor*/
-.logo {
+img {
     height: 70%;
-    margin: 15px 10% 0 2%;
+    margin: 15px 0 0 15%;
     float: left;
 }
 
@@ -41,7 +41,7 @@ h1 {
 .titular {
     width: 45%;
     height: 100%;
-    margin-left: 15%;
+    margin-left: 4%;
     text-align: right;
     float: left;
 }
@@ -64,10 +64,10 @@ nav li,
 nav ul,
 nav a {
     display: inline-block;
-    margin: 10px;
+    margin: 10px 10px 10px 0px;
     color: black;
     font-weight: bold;
-    font-size: 1.1em;
+    font-size: 1.05em;
 }
 
 nav ul {
@@ -155,25 +155,26 @@ footer p {
 }
 
 /*Quitamos el aspecto de link del teléfono*/
-.donde p:first-of-type a {
+.donde a:first-of-type{
     text-decoration: none;
     color: black;
 }
 
 /*Como mantenemos la funcionalidad del link, al pasar el ratón cambia de color*/
-.donde p:first-of-type a:hover {
+.donde a:first-of-type:hover {
     text-decoration: none;
     color: #216288;
 }
 
 /*cambiamos el color del link al mail*/
-.donde p a {
+.donde a {
     color: grey;
 }
 
 /*Usamos el mismo color para el hover que con el resto de elementos, por seguir un mismo estilo corporativo*/
-.donde p a:hover {
+.donde a:hover {
     color: #216288;
+    transition: 0.4s;
 }
 
 /*Quito el estilo por defecto italic de address*/
@@ -210,7 +211,7 @@ address {
 
 /*Estilos para el contenedor del Cuándo flotado a izquierda para posicionarlo a la derecha de Dónde*/
 .cuando {
-    width: 26%;
+    width: 30%;
     margin-top: 2%;
     float: left;
 }
@@ -219,6 +220,7 @@ address {
 .cuando h2,
 .donde h2 {
     width: 95%;
+    padding-left: 0;
     border-bottom: 3px dotted #b8d414;
 }
 
