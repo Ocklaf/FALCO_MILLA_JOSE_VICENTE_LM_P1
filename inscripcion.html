@@ -44,10 +44,10 @@
             </fieldset>
             <fieldset>
                 <legend>Perfil de usuario</legend>
-                <div class="text">
-                <label for="motivos">Explique, brevemente, los motivos para participar en las jornadas</label>
-                <textarea name="motivos" id="motivos" cols="40" rows="5" required placeholder="Escriba aquí una breve explicación"></textarea>
-                </div>
+                <!-- <div class="text"> -->
+                    <label for="motivos">Explique, brevemente, los motivos para participar en las jornadas</label>
+                    <textarea name="motivos" id="motivos" cols="40" rows="5" required placeholder="Escriba aquí una breve explicación"></textarea>
+                <!-- </div> -->
                 <label for="profesion">Elija una de las opciones</label>
                 <select name="profesion" id="profesion" required>
                     <option value="">Seleccione una opción...</option>
@@ -58,7 +58,7 @@
                     <option value="5">Profesor</option>
                     <option value="6">Otros</option>
                 </select><br>
-                <div class="taller">
+                <!-- <div class="taller"> -->
                     <label for="talleres">Elija el taller o talleres a los que desea asistir*</label>
                     <select name="talleres" id="talleres" multiple required>
                         <option value="1">Computación Cuántica</option>
@@ -69,8 +69,8 @@
                         <option value="6">First Lego League</option>
                     </select>
                     <p>*Windows: Mantén la tecla CTRL para elegir varias. Mac: Mantén la tecla COMMAND para elegir varias.</p>
-                </div>
-                <div class="dias">
+                <!--</div>-->
+                <!-- <div class="dias"> -->
                     <label for="dias">Elija una de las siguientes opciones</label>
                     <select name="dias" id="dias">
                         <option value="">Seleccione una opción...</option>
@@ -78,7 +78,7 @@
                         <option value="2">Asistiré el 3 de abril</option>
                         <option value="3">Asistiré el 4 de abril</option>
                     </select>
-                </div>
+                <!-- </div> -->
                 <label class="condiciones" for="condiciones"><input type="checkbox" name="condiciones" id="condiciones" required>&nbsp; He leído y acepto la política de privacidad y el aviso legal.</label>
             </fieldset>
             <button type="submit">Enviar formulario</button>
