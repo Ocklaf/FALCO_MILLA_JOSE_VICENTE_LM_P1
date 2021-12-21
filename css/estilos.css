@@ -1,3 +1,5 @@
+/*ESTILOS REPETIDOS EN TODAS LAS PÁGINAS*/
+
 /*Mini reset CSS y ajuste de caja a borde*/
 *{
     box-sizing: border-box;
@@ -44,7 +46,7 @@ h1{
     float: left;
 }
 
-/*Aumento de tamaño del texto strong para mayor visibilidad en la cabecera*/
+/*Aumento de tamaño del texto strong para mayor visibilidad en la cabecera dada su importáncia*/
 .titular strong{
     font-size: 1.3em;
 }
@@ -74,21 +76,38 @@ nav a{
     text-decoration: none;
 }
 
-/*Aplico este margen para centrar los textos de los li dentro del contenedor nav*/
+/*Centrar los textos de los li dentro del contenedor nav*/
 nav li{
     margin-top: 3px;
 }
 
-/*Subrayamos únicamente el primer tipo de elemento a contenido dentro de nav, dentro de li, dentro de ul*/
+/*Subrayamos únicamente el primer tipo de elemento "a" contenido dentro de nav, dentro de li, dentro de ul*/
 nav ul li:first-of-type a{
     text-decoration: underline;
 }
 
-/*Cambio de color de los links del nav al pasar el ratón por encima*/
+/*Cambio de color de los links del nav al pasar el ratón por encima y con una pequeña transición*/
 nav a:hover{
     color: #216288;
     transition: 0.4s;
 }
+
+/*Ancho del 100%, alto fijo, color de fondo negro y letras en blanco*/
+footer{
+    width: 100%;
+    height: 200px;
+    background-color: black;
+    color: white;
+}
+
+/*Márgenes y padding para conseguir el mismo efecto que la muestra*/
+footer p{
+    padding-top: 20px;
+    margin-left: 20%;
+}
+
+
+/*************** PÁGINA DE INICIO *****************/
 
 /*Contendero para el vídeo y el resto de elementos con las mismas dimensiones que el contenedor que contiene los elementos del header*/
 .video{
@@ -107,12 +126,10 @@ nav a:hover{
 .video p{
     width: 45%;
     float: left;
+    margin: 15px 50px 0 7%;
     text-align: justify;
     font-size: 1.1em;
-    align-items: center;
-    margin-top: 15px;
-    margin-right: 50px;
-    margin-left: 7%;
+    align-items: center;    
 }
 
 /*Le doy una altura para que quede parejo y como la muestra del PDF*/
@@ -141,7 +158,7 @@ nav a:hover{
     color: black;
 }
 
-/*Como mantenemos la funcionalidad, al pasar el ratón cambia de color*/
+/*Como mantenemos la funcionalidad del link, al pasar el ratón cambia de color*/
 .donde p:first-of-type a:hover{
     text-decoration: none;
     color: #216288;
@@ -174,15 +191,19 @@ address{
 }
 
 /*Añadimos cambio de color y tamaño al pasar el ratón por encima*/
-.fa-twitter:hover{
-    width: 25px;
-    color: #216288;
-}
-
 .fa-facebook-f:hover{
     width: 15px;
-    color: #216288;
 }
+
+.fa-twitter:hover{
+    width: 25px;
+}
+
+.fa-twitter:hover, .fa-facebook-f:hover{
+    color: #216288;
+    transition: 0.4s;
+}
+
 
 /*Estilos para el contenedor del Cuándo flotado a izquierda para posicionarlo a la derecha de Dónde*/
 .cuando{
@@ -217,25 +238,23 @@ address{
 .eventos{
     width: 920px;
     height: 430px;
-    margin-top: 50px;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 40px auto 20px auto;
+    overflow: hidden;
 }
 
 /*ancho en función del contenedor section con centrado auto y alineación centrada del texto*/
 .eventos h2{
-    width: 70%;
-    margin-left: auto;
-    margin-right: auto;
+    width: 40%;
+    margin: 0 auto 5px auto;
+    padding-right: 50px;
     text-align: center;
 }
 
-/*ancho y alto fijo e igual para todas las imágenes flotadas a izquierda teniendo en cuenta que están dentro del contenedor de la etiqueta p y dejando márgenes*/
+/*ancho y alto fijo e igual para todas las imágenes están dentro del contenedor de la etiqueta p y dejando márgenes*/
 .eventos img{
     width: 220px;
     height: 120px;
     margin: 5px 15px 5px;
-    float: left;
 }
 
 /*Uso del elemento p como contenedor de las imágenes, dándole un ancho un poco superior para centrar el texto de mejor forma bajo cada imagen, flotado a izquierda*/
@@ -247,19 +266,8 @@ address{
     float: left;
 }
 
-/*Ancho del 100%, alto fijo, color de fondo negro y letras en blanco*/
-footer{
-    width: 100%;
-    height: 200px;
-    background-color: black;
-    color: white;
-}
 
-/*Márgenes y padding para conseguir el mismo efecto que la muestra*/
-footer p{
-    padding-top: 20px;
-    margin-left: 20%;
-}
+/*************** PÁGINA DE LA PROGRAMACIÓN **************/
 
 /*Sección de tabla ocupando el 100% de ancho y alto fijo*/
 .tabla-sec{
@@ -349,6 +357,7 @@ tfoot a{
 
 tfoot a:hover{
     color: #216288;
+    transition: 0.4s;
 }
 
 /*Bloque del section programación*/
@@ -364,28 +373,29 @@ section>h2{
     font-size: 2em;
 }
 
-/*Juntamos estilos idénticos para ambos artículos*/
+/*Juntamos estilos idénticos para ambos*/
 .dia1, .dia2{
     width: 350px;
     float: left;
     margin-top: 30px;
 }
 
-/*Estilos específicos para este artículo*/
+/*Estilos específicos*/
 .dia1{
-    margin-left: 13%;
+    margin-left: 14%;
     margin-right: 30px;
 }
 
 /*Hacemos un espaciado interior para darle hueco como en la referéncia*/
-.dia1 p, .dia1 h2, .dia2 p, .dia2 h2{
+.dia1 li, .dia2 li{
+    list-style: none;
     padding: 10px;
 }
 
 /*Hago un inline-block para ajustar el tamaño de caja al contenido, así le pongo el background-color y le quito el padding por defecto, ajusto como en muestra por izquierda y abajo*/
 .dia1 h2, .dia2 h2{
     display: inline-block;
-    padding: 0px;
+    padding: 0;
     margin-left: 9px;
     margin-bottom: 15px;
     background-color: #bdfc80;
@@ -397,17 +407,14 @@ section>h2{
 /*Cabecera de esta página*/
 form h2{
     text-align: center;
-    margin-top: 40px;
-    margin-bottom: 25px;
+    margin: 40px 0 25px;
 }
 
 /*Aspecto general de los contenedores fieldset*/
 fieldset{
     width: 60%;    
     padding: 20px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 25px;
+    margin: 0 auto 25px auto;
     background-color: #cae9ab;
     box-shadow: 3px 3px 6px #216288;
 }
@@ -421,7 +428,7 @@ legend{
     font-weight: bold;
 }
 
-/*Le dabmos un display: inline-block para podernos aprovechar de sus propiedades para ajustar ancho y márgenes a todas ellas*/
+/*Le damos un display: inline-block para podernos aprovechar de sus propiedades para ajustar ancho y márgenes a todas ellas*/
 label{
     display: inline-block;
     width: 200px;
@@ -439,10 +446,12 @@ input, select{
     margin-bottom: 10px;
 }
 
+/*Color mientras sea inválido el campo requerido*/
 input:required:invalid{
     background-color: rgb(230, 106, 106);
 }
 
+/*Color cuando sea válido el campo requerido*/
 input:required:valid{
     background-color: rgb(132, 216, 132);
 }
