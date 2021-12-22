@@ -3,8 +3,8 @@
 /*Mini reset CSS y ajuste de caja a borde*/
 * {
     box-sizing: border-box;
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
@@ -37,7 +37,7 @@ img {
     float: left;
 }
 
-/*Ancho en porcentaje de su contenedor y alto máximo, margen izquierdo con respecto al logo adaptable, flotado a la izquierda del contenedor logo, alineación de los textos contenidos h1 y strong a la derecha*/
+/*Ancho en porcentaje de su contenedor y alto máximo, margen izquierdo con respecto al logo adaptable, flotado a la izquierda imagen, alineación de los textos contenidos h1 y strong a la derecha*/
 .titular {
     width: 45%;
     height: 100%;
