@@ -6,10 +6,8 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-
 /******************************* ESTILOS REPETIDOS EN TODAS LAS PÁGINAS ************************************/
 
-/*ancho al 100% de lo visible, color sacado de imagen con software gráfico, ancho fijo*/
 header {
     background-color: #216288;
     width: 100%;
@@ -17,14 +15,12 @@ header {
     overflow: hidden;
 }
 
-/*Alto fijo, margen izquierdo adaptable en función del ancho disponible, flotado a la izquierda de su contenedor*/
 img {
     height: 135px;
     margin: 15px 0 0 15%;
     float: left;
 }
 
-/*Ancho en porcentaje de su contenedor y alto máximo, margen izquierdo con respecto al logo, adaptable, flotado a la izquierda para posicionarlo al lado de la imagen, alineación de los textos contenidos h1 y strong a la derecha*/
 .titular {
     width: 45%;
     height: 100%;
@@ -33,19 +29,16 @@ img {
     float: left;
 }
 
-/*Color de letra y márgen superior adaptable, inferior fijo con respecto al texto strong*/
 h1 {
     color: white;
     margin-top: 8%;
     margin-bottom: 20px;
 }
 
-/*Aumento de tamaño del texto strong para mayor visibilidad en la cabecera dada su importáncia*/
 .titular strong {
     font-size: 1.3em;
 }
 
-/*Ancho del 100% para ocupar siempre el espacio disponible, alto fijo, color sacado de imagen, alineación de los textos contenidos al centro*/
 nav {
     width: 100%;
     height: 70px;
@@ -53,7 +46,6 @@ nav {
     text-align: center;
 }
 
-/*Aplico a todos los elementos li, ul y a contenidos en el nav los estilos siguientes, no todos son usados por todos los elementos pero evito poner una regla css por cada uno de ellos*/
 nav ul,
 nav li,
 nav a {
@@ -72,18 +64,15 @@ nav a {
     text-decoration: none;
 }
 
-/*Subrayamos únicamente el primer tipo de elemento "a" contenido dentro de nav, dentro de li, dentro de ul*/
 nav ul li:first-of-type a {
     text-decoration: underline;
 }
 
-/*Cambio de color de los links del nav al pasar el ratón por encima y con una pequeña transición*/
 nav a:hover {
     color: #216288;
     transition: 0.4s;
 }
 
-/*Ancho del 100%, alto fijo, color de fondo negro y letras en blanco*/
 footer {
     width: 100%;
     height: 200px;
@@ -91,7 +80,6 @@ footer {
     color: white;
 }
 
-/*Márgenes y padding para conseguir el mismo efecto que la muestra*/
 footer p {
     width: 80%;
     margin-left: 20%;
@@ -99,9 +87,8 @@ footer p {
 }
 
 
-/********************************************* PÁGINA DE INICIO ******************************************************/
+/***************************************** PÁGINA DE INICIO ********************************************/
 
-/*Contendero para el vídeo y el resto de elementos con las mismas dimensiones que el contenedor que contiene los elementos del header*/
 .video {
     width: 90%;
     margin-left: auto;
@@ -109,13 +96,11 @@ footer p {
     overflow: hidden;
 }
 
-/*Alineación de texto y márgenes para imitar lo solicitado*/
 .video h2 {
     margin: 40px 0 25px;
     text-align: center;
 }
 
-/*Dimensiono el elemento p para poderlo flotar y dejar hueco al vídeo al sacarlo del flujo de la estructura*/
 .video p {
     width: 45%;
     margin: 15px 50px 0 7%;
@@ -124,13 +109,11 @@ footer p {
     font-size: 1.1em;
 }
 
-/*Le doy una altura para que quede parejo y como la muestra del PDF*/
 .video video {
     height: 200px;
     clear: left;
 }
 
-/*Contenedor para las secciones de dónde y cómo se realiza con ancho del 100% y alto fijo, margen superior para separalo del contenedor previo del video, color extraído de la foto*/
 .realiza {
     width: 100%;
     height: 300px;
@@ -139,36 +122,30 @@ footer p {
     overflow: hidden;
 }
 
-/*Estilos para el contenedor del Dónde, flotado a izquierda para posicionarlo dentro de su contenedor*/
 .donde {
     width: 30%;
     margin: 20px 70px 10px 20%;
     float: left;
 }
 
-/*cambiamos el color del link al mail*/
 .donde a {
     color: grey;
 }
 
-/*Quitamos el aspecto de link del teléfono*/
 .donde :first-of-type a{
     text-decoration: none;
     color: black;
 }
 
-/*Usamos el mismo color para el hover que con el resto de elementos, por seguir un mismo estilo corporativo*/
 .donde a:hover {
     color: #216288;
     transition: 0.4s;
 }
 
-/*Quito el estilo por defecto italic de address*/
 address {
     font-style: normal;
 }
 
-/*Cabio tamaño logos Twitter y Facebook, por separado porque la F de Facebook quedaba muy grande con el mismo tamaño que el pájaro de Twitter, le ponemos color negro para camuflar el estilo por defecto de los link*/
 .fa-twitter, .fa-facebook-f {
     color: black;
 }
@@ -195,15 +172,12 @@ address {
     transition: 0.4s;
 }
 
-
-/*Estilos para el contenedor del Cuándo flotado a izquierda para posicionarlo a la derecha de Dónde*/
 .cuando {
     width: 30%;
     margin-top: 20px;
     float: left;
 }
 
-/*Añadimos el borde para el efecto subrayado, color acorde al resto de la web, reducimos su ancho para asimilarlo a la muestra*/
 .cuando h2,
 .donde h2 {
     width: 95%;
@@ -211,23 +185,19 @@ address {
     border-bottom: 3px dotted #b8d414;
 }
 
-/*Quito los estilos por defecto de las etiquetas em*/
 .cuando em {
     font-style: normal;
 }
 
-/*Aumento de tamaño del strong y sólo a ese p que contiene la etiqueta strong le hacemos un alineamiento justificado como la muestra*/
 .cuando p:last-of-type {
     text-align: justify;
     font-size: 1.2em;
 }
 
-/*Color del link inscripción en gris*/
 .cuando p strong a {
     color: grey
 }
 
-/*Sección Eventos con ancho y alto fijo y posicionamiento auto al centro, separando de su parte superior con el margin*/
 .eventos {
     width: 920px;
     height: 430px;
@@ -235,20 +205,17 @@ address {
     overflow: hidden;
 }
 
-/*ancho en función del contenedor section con centrado auto y alineación centrada del texto*/
 .eventos h2 {
     padding-right: 50px;
     text-align: center;
 }
 
-/*ancho y alto fijo e igual para todas las imágenes están dentro del contenedor de la etiqueta p y dejando márgenes*/
 .eventos img {
     width: 220px;
     height: 120px;
     margin: 5px 15px 5px;
 }
 
-/*Uso del elemento p como contenedor de las imágenes, dándole un ancho un poco superior para centrar el texto de mejor forma bajo cada imagen, flotado a izquierda*/
 .eventos p {
     width: 260px;
     margin: 10px 10px 10px 30px;
@@ -258,71 +225,51 @@ address {
 }
 
 
-/*************************************************** PÁGINA DE LA PROGRAMACIÓN ************************************************/
+/*********************************** PÁGINA DE LA PROGRAMACIÓN *******************************************/
 
-/*Sección de tabla ocupando el 100% de ancho y alto fijo*/
 .tabla-sec {
     width: 100%;
     height: 350px;
 }
 
-/*Estilos para el h2 de la sección de la tabla*/
 .tabla-sec h2 {
     margin-top: 55px;
     margin-bottom: 25px;
     text-align: center;
 }
 
-/*Centramos la tabla en cualquier resolución*/
 table {
     margin-left: auto;
     margin-right: auto;
 }
 
-/*Fondo, color de letra y tipo de letra como muestra*/
 table thead th {
     background-color: black;
     color: white;
     font-weight: lighter;
 }
 
-/*Fondo verde a la cabecera del body de la tabla*/
 tbody tr th {
     background-color: #b8d414;
     text-align: left;
 }
 
-/*Color a las table row impares, color extraído de la imagen adjunta para la actividad, pues no es el mismo verde claro del resto de la web, es más oscuro*/
 tbody tr:nth-of-type(odd) {
     background-color: #cae9ab;
 }
 
-/*Ancho columna "Fecha"*/
-table tr th:first-child {
+table tr th:first-child, table tr th:nth-child(4), table tr th:nth-child(5) {
     width: 100px;
 }
 
-/*Ancho columna "Taller"*/
 table tr th:nth-child(2) {
     width: 570px;
 }
 
-/*Ancho columna "Ponente"*/
 table tr th:nth-child(3) {
     width: 130px;
 }
 
-/*Ancho columna "Horario"*/
-table tr th:nth-child(4) {
-    width: 100px;
-}
-
-/*Ancho columna "Horario"*/
-table tr th:nth-child(5) {
-    width: 100px;
-}
-
-/*Subrayado de una fila concreta, con otros selectores sin poner clase no he econtrado la forma de poner ese subrayado*/
 .subrayado {
     border-bottom: 2px solid black;
 }
@@ -331,12 +278,10 @@ table tr th:nth-child(5) {
     margin-right: 4px;
 }
 
-/*Ancho y separación lateral con respecto al texto del icono del reloj en la tabla*/
 .fa-clock {
     width: 16px;
 }
 
-/*Ancho y separación lateral con respecto al texto del icono del marcador en la tabla*/
 .fa-map-marker-alt {
     width: 14px;
 }
@@ -354,7 +299,6 @@ tfoot a:hover {
     transition: 0.4s;
 }
 
-/*Bloque del section programación*/
 .programacion {
     width: 100%;
     height: 350px;
@@ -362,13 +306,11 @@ tfoot a:hover {
     background-color: #e5fed4;
 }
 
-/*Desplazo el contenido por el lado izquierdo y le doy mayor tamaño de letra*/
 .programacion h2 {
     padding-left: 6%;
     font-size: 2em;
 }
 
-/*Juntamos estilos idénticos para ambos*/
 .dia1,
 .dia2 {
     width: 350px;
@@ -376,13 +318,11 @@ tfoot a:hover {
     float: left;
 }
 
-/*Estilos específicos*/
 .dia1 {
     margin-left: 14%;
     margin-right: 30px;
 }
 
-/*Hago un inline-block para ajustar el tamaño de caja al contenido, así le pongo el background-color y le quito el padding por defecto, ajusto como en muestra por izquierda y abajo*/
 .dia1 h2,
 .dia2 h2 {
     display: inline-block;
@@ -392,7 +332,6 @@ tfoot a:hover {
     background-color: #bdfc80;
 }
 
-/*Hacemos un espaciado interior para darle hueco como en la referéncia*/
 .dia1 li,
 .dia2 li {
     list-style: none;
@@ -400,15 +339,13 @@ tfoot a:hover {
 }
 
 
-/******************************************** PÁGINA DEL FORMULARIO *******************************************/
+/**************************************** PÁGINA DEL FORMULARIO *****************************************/
 
-/*Cabecera de esta página*/
 form h2 {
     text-align: center;
     margin: 40px 0 25px;
 }
 
-/*Aspecto general de los contenedores fieldset*/
 fieldset {
     width: 60%;
     padding: 20px;
@@ -417,7 +354,6 @@ fieldset {
     box-shadow: 3px 3px 6px #216288;
 }
 
-/*Personalización del texto de la etiqueta de legend*/
 legend {
     border: 3px solid #216288;
     border-radius: 4px;
@@ -426,19 +362,16 @@ legend {
     font-weight: bold;
 }
 
-/*Le damos un display: inline-block para podernos aprovechar de sus propiedades para ajustar ancho y márgenes a todas ellas*/
 label {
     display: inline-block;
     width: 200px;
     margin-left: 10%;
 }
 
-/*Quitamos tamaño al texto (no obligatorio)*/
 label span {
     font-size: 0.8em;
 }
 
-/*Damos un ancho fijo a todos los campos input y select, los separamos por bajo del resto 10px*/
 input,
 select,
 textarea {
@@ -447,43 +380,36 @@ textarea {
     vertical-align: top;
 }
 
-/*Color mientras sea inválido el campo requerido*/
 input:required:invalid {
     background-color: rgba(230, 106, 106);
 }
 
-/*Color cuando sea válido el campo requerido*/
 input:required:valid {
     background-color: rgb(132, 216, 132);
 }
 
-/*Cambio de color y a negrita cuando nos ponemos a rellenar*/
 input:focus,
 textarea:focus {
     font-weight: bold;
     color: #216288;
 }
 
-/*La advertencia/instrucciones bajo la selección múltiple le damos propiedades adecuadas*/
 fieldset p {
     width: 495px;
     margin: 0 auto 10px auto;
     font-size: 0.65em;
 }
 
-/*Modificamos tamaño de este label ya que está "abrazando" al input, cambiamos las propiedades heredadas por cascada para ponerlo en una única línea*/
 .condiciones {
     width: 100%;
     margin-top: 20px;
 }
 
-/*Damos un ancho muy pequeño para el checkbox que está abrazado por el label y lo desplazamos para alinearlo con el texto*/
 .condiciones input {
     width: 15px;
     margin-top: 5px;
 }
 
-/*Estilos para el botón de enviar formulario*/
 button {
     display: block;
     padding: 10px 25px;
@@ -496,7 +422,6 @@ button {
     font-weight: bold;
 }
 
-/*Algunos cambios de estética al pasar el mouse por encima*/
 button:hover {
     cursor: pointer;
     box-shadow: 3px 3px 3px #b8d414;
