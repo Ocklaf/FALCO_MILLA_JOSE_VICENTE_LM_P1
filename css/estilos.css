@@ -1,12 +1,13 @@
-/*ESTILOS REPETIDOS EN TODAS LAS PÁGINAS*/
-
-/*Mini reset CSS y ajuste de caja a borde*/
+/********************************* Mini reset CSS y ajuste de caja a borde **********************************/
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+
+
+/******************************* ESTILOS REPETIDOS EN TODAS LAS PÁGINAS ************************************/
 
 /*ancho al 100% de lo visible, color sacado de imagen con software gráfico, ancho fijo*/
 header {
@@ -98,7 +99,7 @@ footer p {
 }
 
 
-/*************** PÁGINA DE INICIO *****************/
+/********************************************* PÁGINA DE INICIO ******************************************************/
 
 /*Contendero para el vídeo y el resto de elementos con las mismas dimensiones que el contenedor que contiene los elementos del header*/
 .video {
@@ -257,7 +258,7 @@ address {
 }
 
 
-/*************** PÁGINA DE LA PROGRAMACIÓN **************/
+/*************************************************** PÁGINA DE LA PROGRAMACIÓN ************************************************/
 
 /*Sección de tabla ocupando el 100% de ancho y alto fijo*/
 .tabla-sec {
@@ -321,21 +322,23 @@ table tr th:nth-child(5) {
     width: 100px;
 }
 
-/*Ancho y separación lateral con respecto al texto del icono del reloj en la tabla*/
-.fa-clock {
-    width: 16px;
-    margin-right: 2px;
-}
-
 /*Subrayado de una fila concreta, con otros selectores sin poner clase no he econtrado la forma de poner ese subrayado*/
 .subrayado {
     border-bottom: 2px solid black;
 }
 
+.fa-clock, .fa-map-marker-alt{
+    margin-right: 4px;
+}
+
+/*Ancho y separación lateral con respecto al texto del icono del reloj en la tabla*/
+.fa-clock {
+    width: 16px;
+}
+
 /*Ancho y separación lateral con respecto al texto del icono del marcador en la tabla*/
 .fa-map-marker-alt {
     width: 14px;
-    margin-right: 2px;
 }
 
 tfoot {
@@ -355,11 +358,12 @@ tfoot a:hover {
 .programacion {
     width: 100%;
     height: 350px;
+    overflow: hidden;
     background-color: #e5fed4;
 }
 
 /*Desplazo el contenido por el lado izquierdo y le doy mayor tamaño de letra*/
-section>h2 {
+.programacion h2 {
     padding-left: 6%;
     font-size: 2em;
 }
@@ -368,21 +372,14 @@ section>h2 {
 .dia1,
 .dia2 {
     width: 350px;
-    float: left;
     margin-top: 30px;
+    float: left;
 }
 
 /*Estilos específicos*/
 .dia1 {
     margin-left: 14%;
     margin-right: 30px;
-}
-
-/*Hacemos un espaciado interior para darle hueco como en la referéncia*/
-.dia1 li,
-.dia2 li {
-    list-style: none;
-    padding: 10px;
 }
 
 /*Hago un inline-block para ajustar el tamaño de caja al contenido, así le pongo el background-color y le quito el padding por defecto, ajusto como en muestra por izquierda y abajo*/
@@ -395,8 +392,15 @@ section>h2 {
     background-color: #bdfc80;
 }
 
+/*Hacemos un espaciado interior para darle hueco como en la referéncia*/
+.dia1 li,
+.dia2 li {
+    list-style: none;
+    padding: 10px;
+}
 
-/************** PÁGINA DEL FORMULARIO *************/
+
+/******************************************** PÁGINA DEL FORMULARIO *******************************************/
 
 /*Cabecera de esta página*/
 form h2 {
@@ -429,7 +433,7 @@ label {
     margin-left: 10%;
 }
 
-/*Quitamos tamaño al texto (no necesario)*/
+/*Quitamos tamaño al texto (no obligatorio)*/
 label span {
     font-size: 0.8em;
 }
@@ -445,7 +449,7 @@ textarea {
 
 /*Color mientras sea inválido el campo requerido*/
 input:required:invalid {
-    background-color: rgb(230, 106, 106);
+    background-color: rgba(230, 106, 106);
 }
 
 /*Color cuando sea válido el campo requerido*/
@@ -465,7 +469,6 @@ fieldset p {
     width: 495px;
     margin: 0 auto 10px auto;
     font-size: 0.65em;
-    clear: right;
 }
 
 /*Modificamos tamaño de este label ya que está "abrazando" al input, cambiamos las propiedades heredadas por cascada para ponerlo en una única línea*/
@@ -476,8 +479,8 @@ fieldset p {
 
 /*Damos un ancho muy pequeño para el checkbox que está abrazado por el label y lo desplazamos para alinearlo con el texto*/
 .condiciones input {
-    margin-top: 5px;
     width: 15px;
+    margin-top: 5px;
 }
 
 /*Estilos para el botón de enviar formulario*/
