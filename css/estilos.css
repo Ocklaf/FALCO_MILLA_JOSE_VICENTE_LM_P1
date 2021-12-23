@@ -13,14 +13,23 @@ header {
     background-color: #216288;
     width: 100%;
     height: 190px;
+    overflow: hidden;
 }
 
-/*Div que la contine dentro del header con un 80% del header, 100% del alto del mismo y margenes auto para centrar sea cual sea el tamaño de ventana*/
-.cabecera {
-    width: 80%;
+/*Alto fijo, margen izquierdo adaptable en función del ancho disponible, flotado a la izquierda de su contenedor*/
+img {
+    height: 135px;
+    margin: 15px 0 0 15%;
+    float: left;
+}
+
+/*Ancho en porcentaje de su contenedor y alto máximo, margen izquierdo con respecto al logo, adaptable, flotado a la izquierda para posicionarlo al lado de la imagen, alineación de los textos contenidos h1 y strong a la derecha*/
+.titular {
+    width: 45%;
     height: 100%;
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: 4%;
+    text-align: right;
+    float: left;
 }
 
 /*Color de letra y márgen superior adaptable, inferior fijo con respecto al texto strong*/
@@ -28,22 +37,6 @@ h1 {
     color: white;
     margin-top: 8%;
     margin-bottom: 20px;
-}
-
-/*Ancho con respecto a su contenedor, márgenes adaptables en función del cambio de tamaño, flotado a la izquierda de su contenedor*/
-img {
-    height: 70%;
-    margin: 15px 0 0 15%;
-    float: left;
-}
-
-/*Ancho en porcentaje de su contenedor y alto máximo, margen izquierdo con respecto al logo adaptable, flotado a la izquierda imagen, alineación de los textos contenidos h1 y strong a la derecha*/
-.titular {
-    width: 45%;
-    height: 100%;
-    margin-left: 4%;
-    text-align: right;
-    float: left;
 }
 
 /*Aumento de tamaño del texto strong para mayor visibilidad en la cabecera dada su importáncia*/
@@ -60,27 +53,22 @@ nav {
 }
 
 /*Aplico a todos los elementos li, ul y a contenidos en el nav los estilos siguientes, no todos son usados por todos los elementos pero evito poner una regla css por cada uno de ellos*/
-nav li,
 nav ul,
+nav li,
 nav a {
     display: inline-block;
-    margin: 10px 10px 10px 0px;
-    color: black;
-    font-weight: bold;
-    font-size: 1.05em;
 }
 
-nav ul {
+nav li {
     list-style: none;
 }
 
 nav a {
+    margin: 25px 15px 0;
+    color: black;
+    font-weight: bold;
+    font-size: 1.05em;
     text-decoration: none;
-}
-
-/*Centrar los textos de los li dentro del contenedor nav*/
-nav li {
-    margin-top: 3px;
 }
 
 /*Subrayamos únicamente el primer tipo de elemento "a" contenido dentro de nav, dentro de li, dentro de ul*/
@@ -104,8 +92,9 @@ footer {
 
 /*Márgenes y padding para conseguir el mismo efecto que la muestra*/
 footer p {
-    padding-top: 20px;
+    width: 80%;
     margin-left: 20%;
+    padding-top: 20px;
 }
 
 
@@ -116,27 +105,28 @@ footer p {
     width: 90%;
     margin-left: auto;
     margin-right: auto;
+    overflow: hidden;
 }
 
 /*Alineación de texto y márgenes para imitar lo solicitado*/
 .video h2 {
-    margin: 40px 0 25px 0;
+    margin: 40px 0 25px;
     text-align: center;
 }
 
 /*Dimensiono el elemento p para poderlo flotar y dejar hueco al vídeo al sacarlo del flujo de la estructura*/
 .video p {
     width: 45%;
-    float: left;
     margin: 15px 50px 0 7%;
+    float: left;
     text-align: justify;
     font-size: 1.1em;
-    align-items: center;
 }
 
 /*Le doy una altura para que quede parejo y como la muestra del PDF*/
 .video video {
     height: 200px;
+    clear: left;
 }
 
 /*Contenedor para las secciones de dónde y cómo se realiza con ancho del 100% y alto fijo, margen superior para separalo del contenedor previo del video, color extraído de la foto*/
@@ -145,30 +135,25 @@ footer p {
     height: 300px;
     margin-top: 60px;
     background-color: #e5fed4;
+    overflow: hidden;
 }
 
 /*Estilos para el contenedor del Dónde, flotado a izquierda para posicionarlo dentro de su contenedor*/
 .donde {
     width: 30%;
-    margin: 2% 70px 10px 20%;
+    margin: 20px 70px 10px 20%;
     float: left;
-}
-
-/*Quitamos el aspecto de link del teléfono*/
-.donde a:first-of-type{
-    text-decoration: none;
-    color: black;
-}
-
-/*Como mantenemos la funcionalidad del link, al pasar el ratón cambia de color*/
-.donde a:first-of-type:hover {
-    text-decoration: none;
-    color: #216288;
 }
 
 /*cambiamos el color del link al mail*/
 .donde a {
     color: grey;
+}
+
+/*Quitamos el aspecto de link del teléfono*/
+.donde :first-of-type a{
+    text-decoration: none;
+    color: black;
 }
 
 /*Usamos el mismo color para el hover que con el resto de elementos, por seguir un mismo estilo corporativo*/
@@ -183,17 +168,18 @@ address {
 }
 
 /*Cabio tamaño logos Twitter y Facebook, por separado porque la F de Facebook quedaba muy grande con el mismo tamaño que el pájaro de Twitter, le ponemos color negro para camuflar el estilo por defecto de los link*/
+.fa-twitter, .fa-facebook-f {
+    color: black;
+}
+
 .fa-twitter {
     width: 20px;
-    color: black;
 }
 
 .fa-facebook-f {
     width: 12px;
-    color: black;
 }
 
-/*Añadimos cambio de color y tamaño al pasar el ratón por encima*/
 .fa-facebook-f:hover {
     width: 15px;
 }
@@ -212,7 +198,7 @@ address {
 /*Estilos para el contenedor del Cuándo flotado a izquierda para posicionarlo a la derecha de Dónde*/
 .cuando {
     width: 30%;
-    margin-top: 2%;
+    margin-top: 20px;
     float: left;
 }
 
@@ -250,8 +236,6 @@ address {
 
 /*ancho en función del contenedor section con centrado auto y alineación centrada del texto*/
 .eventos h2 {
-    width: 40%;
-    margin: 0 auto 5px auto;
     padding-right: 50px;
     text-align: center;
 }
@@ -283,9 +267,9 @@ address {
 
 /*Estilos para el h2 de la sección de la tabla*/
 .tabla-sec h2 {
-    text-align: center;
     margin-top: 55px;
     margin-bottom: 25px;
+    text-align: center;
 }
 
 /*Centramos la tabla en cualquier resolución*/
