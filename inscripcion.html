@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulario de Inscripción</title>
-    <link rel="stylesheet" href="/css/estilos.css">
+    <link rel="stylesheet" href="css/estilos.css">
 </head>
+
 <body>
 
     <header>
-        <img class="logo" src="/img/logo.png" alt="logotipo página web">
+        <img class="logo" src="img/logo.png" alt="logotipo página web">
         <div class="titular">
             <h1>II Jornadas de Informática</h1>
             <strong>Valencia, 3 y 4 de Abril de 2021</strong>
@@ -19,62 +21,72 @@
 
     <nav>
         <ul>
-            <li><a href="/index.html">Inicio</a></li>
-            <li><a href="/programacion.html">Programación</a></li>
-            <li><a href="/inscripcion.html">Registro a las jornadas</a></li>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="programacion.html">Programación</a></li>
+            <li><a href="inscripcion.html">Registro a las jornadas</a></li>
         </ul>
     </nav>
 
-    <main>        
+    <main>
         <form>
             <h2>Formulario de inscripción</h2>
             <fieldset>
                 <legend>Datos personales</legend>
                 <label for="nombre">Nombre</label>
                 <!--Utilizo este pattern para poder introducir nombres compuestos, incluyendo el espacio en blanco dentro de los permitidos-->
-                <input type="text" name="nombre" id="nombre" minlength="2" maxlength="50" required pattern="[a-zñáéíóúA-ZÑÁÉÍÓÚ ]{2,50}" title="Sólo se admiten letras con un mínimo de 2 carácters y máximo 50"><br>
+                <input type="text" name="nombre" id="nombre" minlength="2" maxlength="50" required
+                    pattern="[a-zñáéíóúA-ZÑÁÉÍÓÚ ]{2,50}"
+                    title="Sólo se admiten letras con un mínimo de 2 carácters y máximo 50"><br>
                 <label for="apellidos">Apellidos</label>
-                <input type="text" name="apellidos" id="apellidos" minlength="2" maxlength="128" required pattern="[a-zñáéíóúA-ZÑÁÉÍÓÚ ]{2,128}" title="Sólo se admiten letras con un mínimo de 2 carácters y máximo 128"><br>
+                <input type="text" name="apellidos" id="apellidos" minlength="2" maxlength="128" required
+                    pattern="[a-zñáéíóúA-ZÑÁÉÍÓÚ ]{2,128}"
+                    title="Sólo se admiten letras con un mínimo de 2 carácters y máximo 128"><br>
                 <label for="email">E-Mail</label>
-                <input type="email" name="email" id="email" required pattern="^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$" placeholder="correo@ejemplo.com"><br>
+                <input type="email" name="email" id="email" required
+                    pattern="^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$"
+                    placeholder="correo@ejemplo.com"><br>
                 <!--RegExp cogida de w3c-->
                 <label for="tel">Teléfono</label>
-                <input type="tel" name="tel" id="tel" required pattern="(6|7|9)[0-9]{8}" title="9 dígitos numéricos empezando por 6, 7 o 9"><br>
+                <input type="tel" name="tel" id="tel" required pattern="(6|7|9)[0-9]{8}"
+                    title="9 dígitos numéricos empezando por 6, 7 o 9"><br>
                 <label for="foto">Adjuntar foto <span>(no obligatorio)</span></label>
                 <input type="file" name="file" id="foto">
             </fieldset>
             <fieldset>
                 <legend>Perfil de usuario</legend>
-                    <label for="motivos">Explique, brevemente, los motivos para participar en las jornadas</label>
-                    <textarea name="motivos" id="motivos" minlength="25" maxlength="150" cols="40" rows="5" required placeholder="Escriba aquí una breve explicación"></textarea>
-                    <label for="profesion">Elija una de las opciones</label>
-                    <select name="profesion" id="profesion" required>
-                        <option value="">Seleccione una opción...</option>
-                        <option value="1">Estudiante bachillerato</option>
-                        <option value="2">Estudiante universitario</option>
-                        <option value="3">Doctorado</option>
-                        <option value="4">Profesional Informático</option>
-                        <option value="5">Profesor</option>
-                        <option value="6">Otros</option>
-                    </select><br>
-                    <label for="talleres">Elija el taller o talleres a los que desea asistir*</label>
-                    <select name="talleres" id="talleres" multiple required>
-                        <option value="1">Computación Cuántica</option>
-                        <option value="2">Animación 3D</option>
-                        <option value="3">Análisis de dispositivos móviles</option>
-                        <option value="4">Metodologías Ágiles y Transformación Digital</option>
-                        <option value="5">Realidad Virtual y Aumentada</option>
-                        <option value="6">First Lego League</option>
-                    </select>
-                    <p>*Windows: Mantén la tecla CTRL para elegir varias. Mac: Mantén la tecla COMMAND para elegir varias.</p>
-                    <label for="dias">Elija una de las siguientes opciones</label>
-                    <select name="dias" id="dias" required>
-                        <option value="">Seleccione una opción...</option>
-                        <option value="1">Asistiré los dos días</option>
-                        <option value="2">Asistiré el 3 de abril</option>
-                        <option value="3">Asistiré el 4 de abril</option>
-                    </select>
-                <label class="condiciones" for="condiciones"><input type="checkbox" name="condiciones" id="condiciones" required>&nbsp; He leído y acepto la política de privacidad y el aviso legal.</label>
+                <label for="motivos">Explique, brevemente, los motivos para participar en las jornadas</label>
+                <textarea name="motivos" id="motivos" minlength="25" maxlength="150" cols="40" rows="5" required
+                    placeholder="Escriba aquí una breve explicación"></textarea>
+                <label for="profesion">Elija una de las opciones</label>
+                <select name="profesion" id="profesion" required>
+                    <option value="">Seleccione una opción...</option>
+                    <option value="1">Estudiante bachillerato</option>
+                    <option value="2">Estudiante universitario</option>
+                    <option value="3">Doctorado</option>
+                    <option value="4">Profesional Informático</option>
+                    <option value="5">Profesor</option>
+                    <option value="6">Otros</option>
+                </select><br>
+                <label for="talleres">Elija el taller o talleres a los que desea asistir*</label>
+                <select name="talleres" id="talleres" multiple required>
+                    <option value="1">Computación Cuántica</option>
+                    <option value="2">Animación 3D</option>
+                    <option value="3">Análisis de dispositivos móviles</option>
+                    <option value="4">Metodologías Ágiles y Transformación Digital</option>
+                    <option value="5">Realidad Virtual y Aumentada</option>
+                    <option value="6">First Lego League</option>
+                </select>
+                <p>*Windows: Mantén la tecla CTRL para elegir varias. Mac: Mantén la tecla COMMAND para elegir varias.
+                </p>
+                <label for="dias">Elija una de las siguientes opciones</label>
+                <select name="dias" id="dias" required>
+                    <option value="">Seleccione una opción...</option>
+                    <option value="1">Asistiré los dos días</option>
+                    <option value="2">Asistiré el 3 de abril</option>
+                    <option value="3">Asistiré el 4 de abril</option>
+                </select>
+                <label class="condiciones" for="condiciones"><input type="checkbox" name="condiciones" id="condiciones"
+                        required>&nbsp; He leído y acepto la política de privacidad y el aviso legal.</label>
             </fieldset>
             <button type="submit">Enviar formulario</button>
         </form>
@@ -86,4 +98,5 @@
     </footer>
 
 </body>
+
 </html>
