@@ -410,7 +410,7 @@ fieldset p {
     margin-top: 5px;
 }
 
-button {
+.submit {
     display: block;
     padding: 10px 25px;
     background-color: #b8d414;
@@ -422,7 +422,7 @@ button {
     font-weight: bold;
 }
 
-button:hover {
+.submit:hover {
     cursor: pointer;
     box-shadow: 3px 3px 3px #b8d414;
     transition: 0.4s;
